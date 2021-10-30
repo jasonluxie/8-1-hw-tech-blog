@@ -1,25 +1,22 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection.js");
 
-class Blog extends Model {}
+class User extends Model {}
 
-Blog.init(
+User.init(
     {
-        user_id_fk: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "user",
-                key: "user_id_pk",
-            },
-        },
-        blog_id_pk: {
+        user_id_pk: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             notNull: true,
             autoIncrement: true,
         },
-        post: {
-            type: Datatypes.TEXT,
+        username: {
+            type: Datatypes.STRING,
+            notNull: true,
+        },
+        password: {
+            type: DataTypes.STRING,
             notNull: true,
         },
     },
@@ -28,8 +25,8 @@ Blog.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "blog",
+        modelName: "user",
     }
 );
 
-module.exports = Blog;
+module.exports = User;
