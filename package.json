@@ -4,7 +4,8 @@
   "description": "[mysql2](https://www.npmjs.com/package/mysql2)\r [dotenv](https://www.npmjs.com/package/dotenv)\r [sequelize](https://www.npmjs.com/package/sequelize)\r [bcrypt](https://www.npmjs.com/package/bcrypt)\r [express](https://www.npmjs.com/package/express)\r [express-handlesbars](https://www.npmjs.com/package/express-handlebars)\r [express-session](https://www.npmjs.com/package/express-session)\r ## Installation\r Download the repository and then run: \r ```\r npm i\r ```",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node server.js"
   },
   "repository": {
     "type": "git",
