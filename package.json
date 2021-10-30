@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jasonluxie/8-1-hw-tech-blog/issues"
   },
-  "homepage": "https://github.com/jasonluxie/8-1-hw-tech-blog#readme"
+  "homepage": "https://github.com/jasonluxie/8-1-hw-tech-blog#readme",
+  "dependencies": {
+    "mysql2": "^2.3.2"
+  }
 }
