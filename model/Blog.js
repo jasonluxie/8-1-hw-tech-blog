@@ -19,7 +19,7 @@ Blog.init(
             autoIncrement: true,
         },
         post: {
-            type: Datatypes.TEXT,
+            type: DataTypes.TEXT,
             notNull: true,
         },
     },
