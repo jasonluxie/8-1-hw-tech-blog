@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Blog = require('../model/Blog')
 
-router.get('/', async (req, res) => {
+router.get('/', async (req, res) => { //This route is probably wrong too
     try{
         const blogData = await Blog.findAll()
         const blogPosts = blogData.map((data) => data.get({plain : true}))
