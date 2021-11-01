@@ -9,8 +9,8 @@ Comment.init(
             type: DataTypes.INTEGER,
             refernces: {
                 model: "blog",
-                key: "blog_id_pk"
-            }
+                key: "blog_id_pk",
+            },
         },
         content: {
             type: DataTypes.TEXT,
