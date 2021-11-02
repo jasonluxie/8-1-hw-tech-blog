@@ -5,9 +5,12 @@ const { User, Blog } = require("../model/index");
 router.get("/", async (req, res) => {
     try {
         const blogData = await Blog.findAll({
-            include: [{
-                model: User,
-            }]});
+            include: [
+                {
+                    model: User,
+                },
+            ],
+        });
         const blogPosts = blogData.map((data) => data.get({ plain: true }));
         res.render("homepage", { blogPosts, loggedIn: req.session.loggedIn });
     } catch (err) {
@@ -16,18 +19,20 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.get('/post/:id', async (req, res) => {
+router.get("/post/:id", async (req, res) => {
     try {
         const blogData = await Blog.findByPk(req.params.id, {
-            include: [{
-                model: User,
-            }]
-        })
-        const blogPost = blogData.get({plain:true})
-        res.render('post', {...blogPost, loggedIn: req.session.loggedIn})
+            include: [
+                {
+                    model: User,
+                },
+            ],
+        });
+        const blogPost = blogData.get({ plain: true });
+        res.render("post", { ...blogPost, loggedIn: req.session.loggedIn });
     } catch (err) {
-        res.status(500).json(err)
+        res.status(500).json(err);
     }
-})
+});
 
 module.exports = router;

@@ -2,7 +2,6 @@
 const router = require("express").Router();
 const { User } = require("../../model/index");
 const bcrypt = require('bcrypt')
-const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
     try {
