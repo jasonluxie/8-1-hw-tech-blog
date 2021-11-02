@@ -1,6 +1,6 @@
 // api/users
 const router = require("express").Router();
-const { User, Blog, Comment } = require("../../model/index");
+const { User } = require("../../model/index");
 const bcrypt = require('bcrypt')
 const withAuth = require("../../utils/auth");
 
