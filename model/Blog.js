@@ -18,6 +18,10 @@ Blog.init(
             notNull: true,
             autoIncrement: true,
         },
+        title: {
+            type: DataTypes.STRING,
+            notNull: true
+        },
         post: {
             type: DataTypes.TEXT,
             notNull: true,

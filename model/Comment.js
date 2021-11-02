@@ -16,6 +16,14 @@ Comment.init(
             type: DataTypes.TEXT,
             notNull: true,
         },
+        user_fk: {
+            type: DataTypes.STRING,
+            notNull: true,
+            refernces: {
+                model: "user",
+                key: "user_id_pk"
+            }
+        }
     },
     {
         sequelize,
