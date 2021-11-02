@@ -8,6 +8,8 @@
 * [express](https://www.npmjs.com/package/express)
 * [express-handlesbars](https://www.npmjs.com/package/express-handlebars)
 * [express-session](https://www.npmjs.com/package/express-session)
+## Deployment
+Blog is deployed at heroku and can be found [here](https://hw-8-1-tech-blog.herokuapp.com/)
 ## Installation
 Download the repository and then run 
 ```
