@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { route } = require(".");
+const { restore } = require("../model/Blog");
 const { User, Blog } = require("../model/index");
 
 router.get("/", async (req, res) => {
@@ -16,6 +17,27 @@ router.get("/", async (req, res) => {
     } catch (err) {
         res.status(500).json(`There seems to be some sort of database error`);
         console.error(err);
+    }
+});
+
+router.get("/dashboard", async (req, res) => {
+    try {
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get("/login", async (req, res) => {
+    try {
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get("/logout", async (req, res) => {
+    try {
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 
