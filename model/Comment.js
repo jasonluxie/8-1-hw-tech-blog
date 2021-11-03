@@ -12,6 +12,12 @@ Comment.init(
                 key: "blog_id_pk",
             },
         },
+        id: {
+            type: DataTypes.INTEGER,
+            notNull: true,
+            primaryKey: true,
+            autoIncrement: true,
+        },
         content: {
             type: DataTypes.TEXT,
             notNull: true,
@@ -21,9 +27,9 @@ Comment.init(
             notNull: true,
             refernces: {
                 model: "user",
-                key: "user_id_pk"
-            }
-        }
+                key: "user_id_pk",
+            },
+        },
     },
     {
         sequelize,

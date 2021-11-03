@@ -20,7 +20,7 @@ Blog.init(
         },
         title: {
             type: DataTypes.STRING,
-            notNull: true
+            notNull: true,
         },
         post: {
             type: DataTypes.TEXT,
