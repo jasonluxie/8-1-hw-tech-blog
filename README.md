@@ -15,3 +15,5 @@ Download the repository and then run
 ```
 npm i
 ```
+## Notes
+* backend routes are working but no frontend
