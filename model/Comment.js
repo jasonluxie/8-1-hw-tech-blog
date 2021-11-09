@@ -12,7 +12,7 @@ Comment.init(
                 key: "blog_id_pk",
             },
         },
-        id: {
+        comment_id_pk: {
             type: DataTypes.INTEGER,
             notNull: true,
             primaryKey: true,
