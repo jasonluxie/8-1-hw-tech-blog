@@ -1,10 +1,15 @@
 <h1>Test</h1>
 <h2>This is working but posts need to be seeded.</h2>
-<div id="blog-poss" class="col-12">
+<div id="blog-post" class="col-12">
     <div class="blog-posts_box d-flex flex-wrap justify-content-center">
         {{#each blogs as |blog|}}
         {{> blog-post-partial}}
         {{/each}}
+        <form class='blog-posts_new_post'>
+            <input type="text" placeholder="Post Title" required>
+            <textarea placeholder="Post Content" required></textarea>
+            <button id="post-submit-btn" class="blog-posts_button">Post</button>
+        </form>
     </div>
 </div>
 

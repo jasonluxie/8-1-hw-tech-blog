@@ -1,5 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
+    console.log('hello')
     const email = document.querySelector("#email-login").value.trim();
     const password = document.querySelector("#password-login").value.trim();
 
@@ -11,8 +12,7 @@ const loginFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            console.log(req.session);
-            document.location.replace("/dashboard");
+            document.location.replace("/");
         } else {
             alert("Failed to log in.");
         }

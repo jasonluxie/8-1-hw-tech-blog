@@ -6,7 +6,7 @@ const bcrypt = require('bcrypt')
 router.get("/", async (req, res) => {
     try {
         const userData = await User.findAll({
-            attributes: { exclude: ["password"] },
+            // attributes: { exclude: ["password"] },
         });
         res.json(userData);
     } catch (err) {
@@ -16,6 +16,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+    console.log('hello')
     try {
         const userData = await User.findOne({
             where: { email: req.body.email },

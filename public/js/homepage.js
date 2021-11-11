@@ -1,11 +1,19 @@
-// const cardBuilder = async () => {
-//     const res = await fetch ('api/posts', {
-//         method:"GET"
-//     })
-//     const resParse = await res.json()
-//     // if (resParse) {
-        
-//     // }
-// }
+const cardBuilder = async (event) => {
+    event.preventDefault()
+    const res = await fetch ('api/posts', {
+        method:"POST",
+        body: JSON.stringify({
+            postTitle,
+            postContent
+        }),
+        headers: { "Content-Type": "application/json" },
+    })
+    if (res.ok) {
+        document.location.replace('/')
+    } else {
+        alert('Something went wrong')
+    }
 
-// cardBuilder()
+}
+
+document.querySelector('#post-submit-btn').addEventListener('submit', cardBuilder)
