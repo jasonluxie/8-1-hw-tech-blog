@@ -1,4 +1,7 @@
 # 8-1-hw-tech-blog
+##
+This is supposed to be a tech blog which allows users to sign up, log in, and then view posts made by other users while also being able to leave comments associated with posts. 
+At the moment, it is a work in progress and there is no functional front end routing besides the sign up feature. 
 
 ## Packages Used
 * [mysql2](https://www.npmjs.com/package/mysql2)
