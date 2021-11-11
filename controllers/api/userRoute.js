@@ -34,9 +34,10 @@ router.post("/login", async (req, res) => {
             });
             return;
         }
+        // console.log(`userData:`, userData.dataValues.user_id_pk)
         req.session.save(() => {
             req.session.loggedIn = true;
-            req.session.user_id_fk = userData.user_id_fk
+            req.session.user_id_fk = userData.dataValues.user_id_pk
             res.json({ user: userData, message: "Banana" });
         });
     } catch (err) {
