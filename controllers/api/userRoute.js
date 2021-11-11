@@ -37,7 +37,7 @@ router.post("/login", async (req, res) => {
         // console.log(`userData:`, userData.dataValues.user_id_pk)
         req.session.save(() => {
             req.session.loggedIn = true;
-            req.session.user_id_fk = userData.dataValues.user_id_pk
+            req.session.user_id_pk = userData.dataValues.user_id_pk
             res.json({ user: userData, message: "Banana" });
         });
     } catch (err) {
