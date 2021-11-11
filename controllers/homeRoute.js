@@ -12,10 +12,10 @@ router.get("/", async (req, res) => {
                 },
             ],
         });
-        console.log(blogData)
+        // console.log(blogData)
         const blogs = blogData.map((data) => data.get({ plain: true }));
         res.render("homepage", { blogs, 
-            // loggedIn: req.session.loggedIn
+            loggedIn: req.session.loggedIn
          });
     } catch (err) {
         console.log('error');
@@ -26,7 +26,9 @@ router.get("/", async (req, res) => {
 
 router.get("/dashboard", async (req, res) => {
     try {
-        res.render("dashboard")
+        res.render("dashboard", 
+        {loggedIn: req.session.loggedIn}
+        )
     } catch (err) {
         res.status(500).json(err);
     }
@@ -39,17 +41,6 @@ router.get("/login", async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-// router.post("/login", async (req, res) => {
-//     try {
-//         const userData = await User.findOne({where: {username = req.body.username}})
-//         if (!userData) {
-//             res.status(400).json(`That user doesn't seem to exists`)
-//         }
-//     } catch (error) {
-//         res.status(400).json(error)
-//     }
-// })
 
 router.get("/logout", async (req, res) => {
     try {

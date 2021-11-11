@@ -5,9 +5,9 @@
         {{#each blogs as |blog|}}
         {{> blog-post-partial}}
         {{/each}}
-        <form class='blog-posts_new_post'>
-            <input type="text" placeholder="Post Title" required>
-            <textarea placeholder="Post Content" required></textarea>
+        <form class='blog-posts_new-post'>
+            <input type="text" placeholder="Post Title" required class="new-post_title">
+            <textarea placeholder="Post Content" required class="new-post_content"></textarea>
             <button id="post-submit-btn" class="blog-posts_button">Post</button>
         </form>
     </div>
