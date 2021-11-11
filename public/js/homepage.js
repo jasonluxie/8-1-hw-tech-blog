@@ -3,7 +3,9 @@
 //         method:"GET"
 //     })
 //     const resParse = await res.json()
-//     if (resParse) {
+//     // if (resParse) {
         
-//     }
+//     // }
 // }
+
+// cardBuilder()

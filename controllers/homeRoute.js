@@ -12,9 +12,13 @@ router.get("/", async (req, res) => {
                 },
             ],
         });
-        const blogPosts = blogData.map((data) => data.get({ plain: true }));
-        res.render("homepage", { blogPosts, loggedIn: req.session.loggedIn });
+        console.log(blogData)
+        const blogs = blogData.map((data) => data.get({ plain: true }));
+        res.render("homepage", { blogs, 
+            // loggedIn: req.session.loggedIn
+         });
     } catch (err) {
+        console.log('error');
         res.status(500).json(`There seems to be some sort of database error`);
         console.error(err);
     }
