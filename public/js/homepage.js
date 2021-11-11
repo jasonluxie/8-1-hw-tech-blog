@@ -16,8 +16,8 @@ const cardBuilder = async (event) => {
     } else {
         alert('Something went wrong')
     }
-
 }
+
 const deletePost = async (event) => {
     const blogID = event.target.getAttribute('data-id')
     const deleteBlogPost = await fetch (`api/posts/${blogID}`, {

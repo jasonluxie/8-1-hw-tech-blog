@@ -24,10 +24,10 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
     // console.log(req.session.user_id_fk)
-    console.log("req.session:", req.session)
+    // console.log("req.session:", req.session)
     try {
         const blogPost = await Blog.create({
-            user_id_fk: req.session.user_id_fk,
+            user_id_fk: req.session.user_id_pk,
             title: req.body.postTitle,
             post: req.body.postContent
         })
